@@ -25,6 +25,7 @@
     (build-system python-build-system)
     (inputs
      `(("mpv" ,mpv)
+       ("python-mpv" ,python-mpv)
        ))
     (arguments
      `(#:tests? #f                      ;no tests
