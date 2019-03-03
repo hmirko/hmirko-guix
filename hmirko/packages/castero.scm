@@ -33,7 +33,8 @@
     (home-page "https://xgi.github.io/castero")
     (synopsis "castero is a TUI podcast client for the terminal")
     (description "castero is a TUI podcast client for the terminal. This version supports playback in mpv.")
-    (license license:mit)))
+    (license license:agpl3) ; TODO the source repository claims MIT
+    ))
 
 (define-public python-mpv
   (package
