@@ -1,4 +1,4 @@
-(define-module (hmirko packages web-browsers)
+(define-module (hmirko packages web-browser)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages)
   #:use-module (gnu packages)
