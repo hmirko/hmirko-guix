@@ -70,15 +70,13 @@
                (install-file "icons/qutebrowser.svg"
                              (string-append hicolor "/scalable/apps"))
                
-               (substitute* "qutebrowser.desktop"
+               (substitute* "misc/qutebrowser.desktop"
                  (("Exec=qutebrowser")
                   (string-append "Exec=" out "/bin/qutebrowser")))
-               (install-file "qutebrowser.desktop" app)
+               (install-file "misc/qutebrowser.desktop" app)
                #t))))))
     (home-page "https://qutebrowser.org/")
     (synopsis "Minimal, keyboard-focused, vim-like web browser")
     (description "qutebrowser is a keyboard-focused browser with a minimal
 GUI.  It is based on PyQt5 and QtWebKit.")
     (license license:gpl3+)))
-
-qutebrowser-new
