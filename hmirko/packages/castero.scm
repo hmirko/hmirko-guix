@@ -6,6 +6,7 @@
   #:use-module (gnu packages video)
   #:use-module (gnu packages)
   #:use-module (guix download)
+  #:use-module (guix git-download)
   #:use-module (guix build-system gnu)
   #:use-module (guix build-system python))
 
@@ -54,31 +55,29 @@
      `(("mpv" ,mpv)
        ))
     (arguments
-     `(#:tests? #f                      ;no tests
-       ))
+     `(#:tests? #f))
     (home-page "https://github.com/jaseg/python-mpv")
     (synopsis "Python interface to the awesome mpv media player")
     (description "Python interface to the awesome mpv media player")
     (license license:agpl3+)))
 
-(define-public python-vlc
-  (package
-    (name "python-vlc")
-    (version "0.3.9")
-    (source
-     (origin
-       (method git-fetch)
-       (uri (git-reference
-	     (url "https://git.videolan.org/git/vlc/bindings/python.git")
-	     (commit "fff0541870aad3f95edc2dcc46e1ec11438f3ba3")))
-       (sha256
-        (base32
-         "168wn0ry21j7kxgkcjl0lf5kyg5q9v1ygd1vjwzwa3j7hmwiy0p8"))))
-    (build-system python-build-system)
-    (arguments
-     `(#:tests? #f                      ;no tests
-       ))
-    (home-page "https://git.videolan.org/git/vlc/bindings/python.git")
-    (synopsis "Python bindings for the vlc multimedia player")
-    (description "Python bindings for the vlc multimedia player")
-    (license license:lgpl2.1)))
+;; (define-public python-vlc
+;;   (package
+;;     (name "python-vlc")
+;;     (version "fff0541870aad3f95edc2dcc46e1ec11438f3ba3")
+;;     (source
+;;      (origin
+;;        (method git-fetch)
+;;        (uri (git-reference
+;; 	     (url "https://git.videolan.org/git/vlc/bindings/python.git")
+;; 	     (commit "fff0541870aad3f95edc2dcc46e1ec11438f3ba3")))
+;;        (sha256
+;;         (base32
+;;          "168wn0ry21j7kxgkcjl0lf5kyg5q9v1ygd1vjwzwa3j7hmwiy0p8"))))
+;;     (build-system python-build-system)
+;;     (home-page "https://git.videolan.org/git/vlc/bindings/python.git")
+;;     (synopsis "Python bindings for the vlc multimedia player")
+;;     (description "Python bindings for the vlc multimedia player")
+;;     (license license:lgpl2.1)))
+
+;; python-vlc
