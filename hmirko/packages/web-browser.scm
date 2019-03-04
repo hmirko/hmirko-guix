@@ -21,7 +21,7 @@
 
 (define-public qutebrowser-new
   (package
-    (name "qutebrowser")
+    (name "qutebrowser-new")
     (version "1.6.0")
     (source
      (origin
