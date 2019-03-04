@@ -1,20 +1,12 @@
 (define-module (gnu packages fonts)
-  #:use-module (ice-9 regex)
   #:use-module (guix utils)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages)
   #:use-module (guix download)
-  #:use-module (guix git-download)
   #:use-module (guix build-system font)
-  #:use-module (guix build-system gnu)
-  #:use-module (guix build-system trivial)
   #:use-module (gnu packages base)
   #:use-module (gnu packages compression)
-  #:use-module (gnu packages fontutils)
-  #:use-module (gnu packages perl)
-  #:use-module (gnu packages pkg-config)
-  #:use-module (gnu packages python)
-  #:use-module (gnu packages xorg))
+  #:use-module (gnu packages fontutils))
 
 (define-public font-b612
   (package
@@ -23,8 +15,7 @@
     (source (origin
               (method url-fetch)
               (uri (string-append
-                    "https://github.com/polarsys/b612/archive/" version ".tar.gz"
-                    version ".tar.gz"))
+                    "https://github.com/polarsys/b612/archive/" version ".tar.gz"))
               (sha256
                (base32
                 "13xhv1f9dh9z19k3ynsl8dfpj4nvyzg2bhgp07zkxa4al6j2vawx"))))
